@@ -1,0 +1,12 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav{
+    font-size: 16px;
+    color: black;
+}
+
+.section_productos{
+    display: flex;
+}

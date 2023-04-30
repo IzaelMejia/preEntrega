@@ -1,0 +1,17 @@
+.navbar{
+    box-shadow: 0 0 15px 1px #d99f34;
+    background-color: rgba(255, 255, 255, 0.505);
+    
+  .container-fluid{
+    display: flex;
+    width: 100%;
+  }
+    a{
+        color: black;
+        
+    }
+}
+.nav-link:hover{
+    color: #d9a034;
+    font-weight: 600;
+}

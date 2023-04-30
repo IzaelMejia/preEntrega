@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+@import "_font";
+@import "_navbar";
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* ============== MOBILE FIRST ================== */
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr ;
+	grid-template-rows: auto;
+        grid-template-areas: 
+        "nav"
+        "header"
+        "productos"
+        "footer";
+
+}
+
+/* Pagia de Productoss*/
+    .products{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto;
+            grid-template-areas: 
+            "nav"
+            "header"
+            "filtros"
+            "productos"
+            "footer";
+    }
+
+/* Pagina Nosotros*/
+.contendor_productos{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto;
+        grid-template-areas: 
+        "nav"
+        "main"
+        "footer";
+}
+
+
+    #mainnav{
+        grid-area: nav;
+    }
+    #header{
+        grid-area: header;
+    }
+    #productos{
+        grid-area: productos;
+    }
+    #footer{
+        grid-area: footer;
+    }
+    #filtros{
+        grid-area: filtros;
+    }
+    #main{
+        grid-area: main;
+    }
+
+h1{
+    text-align: center;
+    
+}
+main{
+    margin-bottom: 20px;
+
+    
+}
+.card{
+        text-align: center;
+        margin: 0px auto;
+        margin-top: 10px;
+        
+}
+
+footer{
+    text-align: center;
+    background-color: #dddddd2c;
+
+}
+
+.cabeza {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+    h1{
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgba(255, 255, 255, 0.445);
+    }
+
+    h2{
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgba(255, 255, 255, 0.445);
+
+    }
+  }
+  .productos_texto {
+    text-align: center;
+  }
+
+/* Productos */
+.secondNav{
+    text-align: center;
+    
+    b{
+        font-size: 1.9rem;
+    }
+    li{
+        list-style: none;
+    }
+      a{
+        text-decoration: none;
+        color: rgb(164, 166, 170);
+        font-weight: 600;
+
+        
+    }
+    label{
+        color: rgb(164, 166, 170);
+    }
+    :hover{
+        color: #e63946;
+        font-weight: 600;
+    }
+}
+
+/* Nosotros*/
+.section_nosotros {
+    text-align: center;
+    p{
+        margin: 8px;
+    }
+
+    img{
+    width: 100%;
+    text-align: center; 
+    }
+
+
+}
+.section_separador{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    p{
+        margin: 5px;
+    }
+}
+
+// Pagina Contacto
+.header_img{
+    width: 100%;
+}
+.section_formulario {
+    margin: 5px;
+    input{
+        width: 100%;
+        font-size: 1.8rem;
+    }
+    
+    button{
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+.section_2_formulario{
+    text-align: center;
+}
+
+
+  @media (min-width: 1024px){
+    /* Index*/
+	.contenedor{
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+		"nav nav nav"
+        "header header header"
+		"productos productos productos"
+		"footer footer footer";
+	}
+
+
+    .section_productos {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Productos*/
+    .products{
+        grid-template-columns: 20vw 80vw;
+		grid-template-areas:
+            "nav nav nav"
+            "header header header"
+            "filtros productos productos"
+            "footer footer footer";
+    }
+
+    .secondNav{
+        text-align: start;
+        margin: 5px;
+    }
+
+    //Pagina Nosotros
+    .contenedor_productos{
+        grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+            "nav nav nav"
+            "header header header"
+            "main main main"
+            "footer footer footer";
+    }
+    .section_nosotros{
+        display: flex;
+        margin: 10px;
+        
+        .section_texto{
+            width: 80%;
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .contacto{
+        grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+            "nav nav nav"
+            "header header header"
+            "main main main"
+            "footer footer footer";
+    }
+    
+    .section_formulario {
+        margin: 5px;
+        width: 70%;
+        font-size: 2.3rem;
+
+        .form-group{
+            width: 90%;
+        }
+        button{
+            width: 50%;
+        }
+    }
+    .section_contact{
+        display: flex;
+        
+    }
+}
+  
