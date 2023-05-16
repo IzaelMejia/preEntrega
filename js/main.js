@@ -90,9 +90,9 @@ const agregarAlCarrito = (id)=>{ //recibe como parametro id
     calcularTotal()
 }
 
+
 const contenedorCarrito=document.getElementById("contenedorCarrito")
 const verCarrito=document.getElementById("verCarrito")
-
 
 verCarrito.addEventListener("click",()=>{
     mostrarCarrito()
@@ -100,7 +100,6 @@ verCarrito.addEventListener("click",()=>{
 
 //funcion para mostrar carrito
 const mostrarCarrito= ()=> {
-    
     contenedorCarrito.innerHTML=""  //evitamos que se repita img
     //iterar sobre carrito compras para mostrar productos 
     carrito.forEach(producto => { //creo card 

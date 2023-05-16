@@ -49,10 +49,18 @@ const mostrarProductos= ()=>{
         contenedorProductos.appendChild(card)
         const boton = document.getElementById(`boton${producto.id}`) //que generela funcion asociada con el id 
         boton.addEventListener("click", ()=>{
-         //funcion agregar al carrito
-         
-         agregarAlCarrito(producto.id)
-        })
+            //funcion agregar al carrito
+            Toastify({
+               text: "Se agrego al carrito ",
+               duration: 3000,
+               gravity: "bottom",
+               position: "right",
+               style: {
+                   background:"blueviolet",
+               }
+           }) .showToast();
+            agregarAlCarrito(producto.id)
+           })
     })
 
 }

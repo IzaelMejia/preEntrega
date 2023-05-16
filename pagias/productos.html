@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos CAPIN bonitos y con muchos diseños</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/main.css">
 
@@ -56,23 +57,23 @@
             <span><b>Gorras</b></span>
             <ul>
                 <li>
-                    <a href="">Gorras Rojas(4)</a>
+                    <a href="">Rojo</a>
                 </li>
     
                 <li>
-                    <a href="">Gorras Negras(4)</a>
+                    <a href="">Negro</a>
                 </li>
     
                 <li>
-                    <a href="">Gorras Azules(4)</a>
+                    <a href="">Azul</a>
                 </li>
     
                 <li>
-                    <a href="">Gorras Amarillas(4)</a>
+                    <a href="">Gris</a>
                 </li>
     
                 <li>
-                    <a href="">Gorras Verdes(4)</a>
+                    <a href="">Verde</a>
                 </li>
             </ul>
             
@@ -94,14 +95,9 @@
         <!-- Inicia  main -->
         <main id="productos" class="">
             <!-- Inicia  section -->
-           <section class="section_productos2">
-            <div id="contenedorProductos" class="row"></div>
-            <hr>
-            <h2>Carrito de Compras</h2>
-            <h3>El total de su compra es de: <span id="total"></span></h3>
-            <button class="btn colorBoton" id="verCarrito">Ver Carrito</button>
-            <button class="btn colorBoton" id="vaciarCarrito">Vaciar Carrito</button>
-            <div id="contenedorCarrito" class="row"></div>
+            <section class="sectionProductos">
+              <div id="contenedorProductos" class="row"></div>
+              
             </section>
 
             
@@ -126,8 +122,10 @@
 
 
     </div>
+
     <script src="js/wow.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script> 
     <script>
         new WOW().init();
     </script> 

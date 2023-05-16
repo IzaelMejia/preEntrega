@@ -40,15 +40,22 @@
         </div>
       </nav>   
       <!-- Cierre nav -->
-    <hr>
-    <h1 class="text-center">Carrito</h1>
-    <hr>
-    <div id="contenedorCarrito" class="row"></div>
+   
     <!-- carrito de compras -->
+
+    <section class="sectionProductos">
+      <div id="contenedorProductos" class="row contenerProductosCarrito"></div>
+      
+      <h2>Carrito de Compras</h2>
+      <h3>El total de su compra es de: <span id="total"></span></h3>
+      <button class="btn colorBoton" id="verCarrito">Ver Carrito</button>
+      <button class="btn colorBoton" id="vaciarCarrito">Vaciar Carrito</button>
+      <div id="contenedorCarrito" class="row"></div>
+    </section>
     
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <!-- <script src="../js/main.js"></script> -->
+    <script src="../js/main.js"></script>
 
 </body>
 </html>
