@@ -10,19 +10,15 @@ class Producto{
 }
 
 //creamos objetos
-const sueter1 = new Producto (1,"Sueter Verde", 499,"../img/productos/sueter1.webp")
-const sueter2= new Producto (2,"Sueteres Vintage", 999,"../img/productos/sueter2.webp")
-const sueter3= new Producto (3,"Sueteres Gris Azul", 599,"../img/productos/sueter3.webp")
-const sueter4= new Producto (4,"Sueteres  Amarillo", 699,"../img/productos/sueter4.webp")
-const sueter5= new Producto (5,"Sueteres Grises ", 1799,"../img/productos/sueter5.webp")
-const sueter6= new Producto (6,"Sueteres  Navidad", 999,"../img/productos/sueter6.webp")
-const sueter7= new Producto (7,"Sueteres  Vintage 4", 1599,"../img/productos/sueter7.webp")
-const sueter8= new Producto (8,"Sueteres  Azul y Gris", 1199,"../img/productos/sueter8.webp")
-const sueter9= new Producto (9,"Sueteres  rositas", 2199,"../img/productos/sueter9.webp")
-const sueter10= new Producto (10,"Sueteres  Hombre y Mujer", 1699,"../img/productos/sueter10.webp")
+const collar1 = new Producto (1,"Collar de Corazón", 499,"../img/accesorios/collar1.webp")
+const collar2= new Producto (2,"Collar con Flor", 999,"../img/accesorios/collar2.webp")
+const collar3= new Producto (3,"Collar de Estrella", 599,"../img/accesorios/collar3.webp")
+const bolso1= new Producto (4,"Bolso Palemeras", 699,"../img/accesorios/bolso1.webp")
+const bolso2= new Producto (5,"Boloso de mano variado ", 1799,"../img/accesorios/bolso2.webp")
+const bolso3= new Producto (6,"Bolso de mano café", 999,"../img/accesorios/bolso3.webp")
 
 //crear array con catalogo de productos
-const productos= [sueter1,sueter2,sueter3,sueter4,sueter5,sueter6,sueter7,sueter8,sueter9,sueter10]
+const productos= [collar1,collar2,collar3,bolso1,bolso2,bolso3]
 
 let carrito=[] //array vacio del carrito 
 
@@ -38,34 +34,25 @@ const contenedorProductos = document.getElementById("contenedorProductos")
 const mostrarProductos= ()=>{
     productos.forEach( producto=>{ //cremaos card para los productos
         const card = document.createElement("div")
-        card.classList.add("col-xl-3","col-md-6", "col-xs-12") //columas de grillas creadas
+        card.classList.add("col-xl-4","col-md-6", "col-xs-12") //columas de grillas creadas
         card.innerHTML=`
-            <div class="card" style="width: 28rem;">
+                <div class="card" style="width: 28rem;">
                 <img src="${producto.img}" class="card-img-top imgProductos" alt="${producto.img}">
                 <div class="card-body">
                     <h5 class="card-title">$${producto.precio}</h5>
                     <p class="card-text">${producto.nombre}</p>
                     <button class="btn colorBoton" id="boton${producto.id}">Agregar al Carrito</button>
                 </div>
-            </div>        
+                </div>        
         `
         //invocamos appendChild
         contenedorProductos.appendChild(card)
         const boton = document.getElementById(`boton${producto.id}`) //que generela funcion asociada con el id 
         boton.addEventListener("click", ()=>{
          //funcion agregar al carrito
-         Toastify({
-            text: "Se agrego al carrito ",
-            duration: 3000,
-            gravity: "bottom",
-            position: "right",
-            style: {
-                background:"blueviolet",
-            }
-        }) .showToast();
+         
          agregarAlCarrito(producto.id)
         })
-        
     })
 
 }
@@ -74,10 +61,8 @@ mostrarProductos()
 
 const agregarAlCarrito = (id)=>{ //recibe como parametro id
     const productoEnCarrito= carrito.find(producto => producto.id === id)
-    
     if(productoEnCarrito){ //si esta el id
         productoEnCarrito.cantidad++
-        
         
     }else{ //si no encontro producto en carrito va hacer push
         const producto = productos.find(producto => producto.id === id)
@@ -113,10 +98,9 @@ const mostrarCarrito= ()=> {
                     <h5 class="card-title">$${producto.precio}</h5>
                     <p class="card-text">${producto.nombre}</p>
                     <p>Cantidad:${producto.cantidad}</p>
-                    <button class="btn colorBoton" id="eliminar${producto.id}">Eliminar Producto</button>
+                    <button class="btn colorBoton" id="eliminar${producto.id}" >Eliminar Producto</button>
                 </div>
-            </div>  
-            `
+            </div>  `
             //invocamos appendChild
             contenedorCarrito.appendChild(card) 
         //Eliminar productos del carrito
@@ -145,8 +129,8 @@ const eliminarDelCarrito = (id)=>{
 const vaciarCarrito= document.getElementById("vaciarCarrito")
 vaciarCarrito.addEventListener("click",()=>{
     Swal.fire({
-        title: 'Estas seguro de eliminar el producto?',
-        text: "No podrás revertir esto.!",
+        title: 'Estas seguro de borrarlo?',
+        text: "¡No podrás revertir esto!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -156,14 +140,12 @@ vaciarCarrito.addEventListener("click",()=>{
         if (result.isConfirmed) {
           Swal.fire(
             'Borrado!',
-            'Se ha vaciado el carrito.',
+            'Su archivo ha sido eliminado.',
             'success'
           )
         }
         eliminarTodoElCarrito()
       })
-      
-     
 }) 
 
 //Funcion eliminar todo de un producto
