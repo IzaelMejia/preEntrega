@@ -1,0 +1,29 @@
+{
+    "images": [
+      {
+        "url": "../img/productos/sueter1.png",
+        "title": "Imagen 1"
+      },
+      {
+        "url": "../img/productos/sueter1.webp",
+        "title": "Imagen 2"
+      },
+      {
+        "url": "../img/productos/sueter1.png",
+        "title": "Imagen 3"
+      },
+      {
+        "url": "../img/productos/sueter1.png",
+        "title": "Imagen 3"
+      },
+      {
+        "url": "../img/productos/sueter1.png",
+        "title": "Imagen 3"
+      },
+      {
+        "url": "../img/productos/sueter1.png",
+        "title": "Imagen 3"
+      }
+    ]
+  }
+  

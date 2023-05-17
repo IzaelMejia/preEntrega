@@ -179,6 +179,15 @@ footer {
 
 .botonContacto{
   width: 100%;
+  background-color: #d9a034;
+  color: #fff;
+}
+
+.botonContacto:hover{
+  background-color: #ffa600;
+  color: #fff;
+  
+  font-weight: 700;
 }
 
 .section_separador {
@@ -193,6 +202,12 @@ footer {
 
 .header_img{
   width: 100%;
+}
+
+.image{
+  width: 340px;
+  height: 340px;
+  margin-top: 50px;
 }
 
 @media (min-width: 1024px) {
